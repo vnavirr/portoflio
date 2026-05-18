@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="VitaMind insights screen">
+  <rect width="560" height="360" fill="#f7f4ef"/>
+  <rect x="40" y="40" width="480" height="280" rx="16" fill="#fffdf9" stroke="#7a9e8e" stroke-opacity="0.25"/>
+  <text x="72" y="88" font-family="Georgia, serif" font-size="24" fill="#2c2824">Cognitive insights</text>
+  <rect x="72" y="120" width="400" height="12" rx="6" fill="#7a9e8e" opacity="0.25"/>
+  <rect x="72" y="148" width="320" height="12" rx="6" fill="#7a9e8e" opacity="0.18"/>
+  <rect x="72" y="200" width="180" height="48" rx="12" fill="#7a9e8e" opacity="0.22"/>
+</svg>

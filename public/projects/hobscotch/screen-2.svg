@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="Hobscotch matching screen">
+  <rect width="560" height="360" fill="#f7f4ef"/>
+  <rect x="160" y="24" width="240" height="312" rx="24" fill="#fffdf9" stroke="#d4a574" stroke-opacity="0.3"/>
+  <circle cx="220" cy="100" r="28" fill="#d4a574" opacity="0.35"/>
+  <circle cx="340" cy="100" r="28" fill="#d4a574" opacity="0.25"/>
+  <text x="200" y="170" font-family="Georgia, serif" font-size="18" fill="#2c2824">Mutual interests</text>
+  <rect x="200" y="190" width="160" height="12" rx="6" fill="#d4a574" opacity="0.3"/>
+  <rect x="200" y="214" width="120" height="12" rx="6" fill="#d4a574" opacity="0.2"/>
+</svg>

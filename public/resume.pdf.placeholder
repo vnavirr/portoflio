@@ -1,0 +1,7 @@
+# Resume placeholder
+
+Add your resume as `public/resume.pdf` (same folder as this file, named exactly `resume.pdf`).
+
+Then delete this placeholder file. The nav **Resume** link points to `/resume.pdf` and opens in a new tab.
+
+Until the PDF is uploaded, that link may return 404 in production — that is expected.

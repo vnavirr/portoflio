@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="VitaMind nutrition app preview">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7a9e8e" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#f7f4ef"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#bg)"/>
+  <rect x="48" y="56" width="544" height="288" rx="16" fill="#fffdf9" stroke="#2c2824" stroke-opacity="0.08"/>
+  <text x="80" y="108" font-family="Georgia, serif" font-size="28" fill="#2c2824">VitaMind</text>
+  <text x="80" y="142" font-family="system-ui, sans-serif" font-size="15" fill="#5c5650">Vitamin intake � cognitive health</text>
+  <rect x="80" y="170" width="120" height="80" rx="10" fill="#7a9e8e" opacity="0.25"/>
+  <rect x="220" y="170" width="120" height="80" rx="10" fill="#7a9e8e" opacity="0.18"/>
+  <rect x="360" y="170" width="180" height="80" rx="10" fill="#7a9e8e" opacity="0.12"/>
+</svg>
