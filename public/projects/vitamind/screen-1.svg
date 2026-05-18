@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="VitaMind dashboard screen">
-  <rect width="560" height="360" fill="#f7f4ef"/>
-  <rect x="40" y="40" width="480" height="280" rx="16" fill="#fffdf9" stroke="#7a9e8e" stroke-opacity="0.25"/>
-  <text x="72" y="88" font-family="Georgia, serif" font-size="24" fill="#2c2824">Today's vitamins</text>
-  <rect x="72" y="110" width="200" height="16" rx="8" fill="#7a9e8e" opacity="0.35"/>
-  <rect x="72" y="150" width="160" height="64" rx="10" fill="#7a9e8e" opacity="0.2"/>
-  <rect x="252" y="150" width="160" height="64" rx="10" fill="#7a9e8e" opacity="0.15"/>
-</svg>

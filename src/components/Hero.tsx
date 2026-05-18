@@ -2,6 +2,16 @@ import { SITE } from "../types";
 
 const social = [
   {
+    label: "GitHub",
+    href: SITE.github,
+    external: true,
+  },
+  {
+    label: "LinkedIn",
+    href: SITE.linkedin,
+    external: true,
+  },
+  {
     label: SITE.email,
     href: `mailto:${SITE.email}`,
     icon: (
@@ -14,16 +24,6 @@ const social = [
         />
       </svg>
     ),
-  },
-  {
-    label: "LinkedIn",
-    href: SITE.linkedin,
-    external: true,
-  },
-  {
-    label: "GitHub",
-    href: SITE.github,
-    external: true,
   },
 ] as const;
 

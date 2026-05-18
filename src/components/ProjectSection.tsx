@@ -22,7 +22,7 @@ export function ProjectSection({
         {subtitle && (
           <p className="mt-3 max-w-2xl text-lg text-ink-muted">{subtitle}</p>
         )}
-        <div className="mt-12 grid gap-8 sm:grid-cols-2">{children}</div>
+        <div className="mt-12 grid min-w-0 gap-8 sm:grid-cols-2">{children}</div>
       </div>
     </section>
   );

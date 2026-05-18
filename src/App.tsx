@@ -40,16 +40,6 @@ export default function App() {
     return () => observer.disconnect();
   }, []);
 
-  const openTechnical = (project: TechnicalProject) => {
-    setDesignOpen(null);
-    setTechnicalOpen(project);
-  };
-
-  const openDesign = (project: DesignProject) => {
-    setTechnicalOpen(null);
-    setDesignOpen(project);
-  };
-
   return (
     <>
       <Nav activeSection={activeSection} />
@@ -68,7 +58,10 @@ export default function App() {
               tagline={project.tagline}
               accent={project.accent}
               thumbnail={project.thumbnail}
-              onOpen={() => openTechnical(project)}
+              onOpen={() => {
+                setDesignOpen(null);
+                setTechnicalOpen(project);
+              }}
             />
           ))}
         </ProjectSection>
@@ -84,9 +77,12 @@ export default function App() {
               title={project.title}
               tagline={project.tagline}
               accent={project.accent}
-              thumbnail={project.thumbnail}
               badge={project.badge}
-              onOpen={() => openDesign(project)}
+              thumbnail={project.thumbnail}
+              onOpen={() => {
+                setTechnicalOpen(null);
+                setDesignOpen(project);
+              }}
             />
           ))}
         </ProjectSection>

@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="Hobscotch onboarding screen">
-  <rect width="560" height="360" fill="#f7f4ef"/>
-  <rect x="160" y="24" width="240" height="312" rx="24" fill="#fffdf9" stroke="#d4a574" stroke-opacity="0.3"/>
-  <text x="200" y="80" font-family="Georgia, serif" font-size="22" fill="#2c2824">Welcome</text>
-  <text x="200" y="110" font-family="system-ui, sans-serif" font-size="13" fill="#5c5650">Trade skills, find your people</text>
-  <rect x="200" y="140" width="160" height="40" rx="20" fill="#d4a574" opacity="0.4"/>
-  <rect x="200" y="200" width="160" height="56" rx="12" fill="#d4a574" opacity="0.15"/>
-</svg>

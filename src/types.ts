@@ -3,7 +3,7 @@ export type TechnicalProject = {
   title: string;
   tagline: string;
   accent: string;
-  /** e.g. "/projects/emoji-prediction/thumbnail.svg" */
+  /** Card image, e.g. `/projects/emoji-prediction.webp` */
   thumbnail?: string;
   tech: string[];
   problem: string;
@@ -19,8 +19,11 @@ export type DesignProject = {
   title: string;
   tagline: string;
   accent: string;
-  thumbnail?: string;
   badge?: string;
+  /** Card image, e.g. `/projects/hobscotch.webp` */
+  thumbnail?: string;
+  /** Optional case study gallery inside the modal */
+  images?: { src: string; caption: string }[];
   overview: string;
   problem: string;
   process: string[];
@@ -28,7 +31,6 @@ export type DesignProject = {
   outcomes: string;
   links: { label: string; href: string }[];
   github?: string;
-  images?: { src: string; caption: string }[];
 };
 
 export const SITE = {

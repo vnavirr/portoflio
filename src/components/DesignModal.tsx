@@ -16,29 +16,6 @@ export function DesignModal({ project, onClose }: DesignModalProps) {
           <p className="text-sm font-medium text-accent">{project.badge}</p>
         )}
 
-        {project.images && project.images.length > 0 && (
-          <section aria-label="Project screens">
-            <ul className="space-y-4">
-              {project.images.map((image) => (
-                <li key={image.src}>
-                  <figure className="overflow-hidden rounded-xl border border-ink/8 bg-cream">
-                    <img
-                      src={image.src}
-                      alt={image.caption}
-                      loading="lazy"
-                      decoding="async"
-                      className="w-full object-cover"
-                    />
-                    <figcaption className="px-4 py-2 text-sm text-ink-muted">
-                      {image.caption}
-                    </figcaption>
-                  </figure>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
-
         <CaseBlock title="Overview" body={project.overview} />
         <CaseBlock title="Problem" body={project.problem} />
 
@@ -56,9 +33,33 @@ export function DesignModal({ project, onClose }: DesignModalProps) {
         <CaseBlock title="Solution" body={project.solution} />
         <CaseBlock title="Outcomes" body={project.outcomes} />
 
-        <div
-          className="flex flex-wrap gap-3 pt-2"
-        >
+        {project.images && project.images.length > 0 && (
+          <section className="space-y-4">
+            <h3 className="font-sans text-sm font-semibold uppercase tracking-wide text-ink">
+              Screens
+            </h3>
+            <ul className="space-y-6">
+              {project.images.map((img) => (
+                <li key={img.src}>
+                  <figure className="overflow-hidden rounded-xl border border-ink/10 bg-cream">
+                    <img
+                      src={img.src}
+                      alt={img.caption}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full object-cover"
+                    />
+                    <figcaption className="border-t border-ink/8 px-4 py-3 text-sm text-ink-muted">
+                      {img.caption}
+                    </figcaption>
+                  </figure>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        <div className="flex flex-wrap gap-3 pt-2">
           {project.links.map((link) => (
             <a
               key={link.href}
@@ -96,5 +97,3 @@ function CaseBlock({ title, body }: { title: string; body: string }) {
     </section>
   );
 }
-
-

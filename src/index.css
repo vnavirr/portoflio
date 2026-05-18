@@ -6,7 +6,8 @@
   --color-cream: #f7f4ef;
   --color-ink: #2c2824;
   --color-ink-muted: #5c5650;
-  --color-accent: #735a48;
+  /* Darkened from #8b6f5c for ≥4.5:1 contrast on cream (WCAG AA body text) */
+  --color-accent: #5c4334;
   --color-card: #fffdf9;
 }
 
@@ -20,6 +21,7 @@ body {
   background-color: var(--color-cream);
   color: var(--color-ink);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 ::selection {

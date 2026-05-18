@@ -1,40 +1,43 @@
 import type { TechnicalProject } from "../types";
 
+/**
+ * Thumbnails: add WebP files under `public/projects/` (max ~1200px wide) and set `thumbnail`:
+ * - `/projects/emoji-prediction.webp`
+ * - `/projects/vitacore.webp`
+ * - `/projects/memmatch.webp`
+ */
 export const technicalProjects: TechnicalProject[] = [
   {
     id: "emoji-prediction",
     title: "Emoji Prediction Model",
     tagline:
-      "Multi-class NLP pipeline predicting which emoji a tweet originally used.",
+      "Classical NLP + ML notebooks that predict which of 10 emoji classes originally appeared in a tweet.",
     accent: "#c4a882",
-    thumbnail: "/projects/emoji-prediction/thumbnail.svg",
     tech: [
       "Python",
       "Google Colab",
+      "Jupyter",
       "scikit-learn",
       "TF-IDF",
-      "Logistic Regression",
-      "Naive Bayes",
-      "Linear SVC",
+      "NLP",
     ],
     problem:
-      "Given tweet text with the emoji removed, can a classical ML model predict which of 10 emoji classes (blush, flushed, grin, heart_eyes, relaxed, smirk, sob, weary, wink, yum) the author originally posted?",
+      "Given tweet text with its emoji removed, can we predict which emoji the author used? The labeled dataset spans over 225,000 tweets across 10 emoji classes (multi-class text classification).",
     bullets: [
-      "Trained and compared three classifiers on 225k+ labeled tweets with shared preprocessing: cleaning, TF-IDF vectorization, and an 80/20 train/test split.",
-      "Achieved ~52% test accuracy with Logistic Regression; documented per-class precision/recall and confusion patterns across notebooks.",
-      "Found emotionally distinct emojis (e.g. heart_eyes, sob) predict well, while similar-tone pairs (sob/weary, wink/smirk) remain hardest to separate.",
+      "Implemented three comparable classifiers—logistic regression, multinomial Naive Bayes, and Linear SVC—each in a self-contained Colab notebook with identical preprocessing for fair evaluation.",
+      "Shared pipeline: clean tweets (lowercase, strip URLs/mentions/punctuation), TF–IDF vectorization, and an 80/20 train–test split materialized as `data_split.pkl` for reproducibility.",
+      "Reported accuracy, confusion matrices, and qualitative findings (e.g., emotionally similar emojis and class imbalance) directly from the notebooks.",
     ],
-    role: "Developer · ICS datathon project",
+    role: "Developer · ICS / Datathon-style course project",
     github: "https://github.com/vnavirr/d26-emoji-in-tweets",
-    timeline: "2026",
+    timeline: "Course project",
   },
   {
     id: "vitacore",
     title: "VitaCore",
     tagline:
-      "VenusHacks health-tech platform connecting fragmented maternal cardiovascular care.",
+      "VenusHacks build — VITASCORE, an intelligence layer for fragmented maternal cardiovascular care (demo data).",
     accent: "#8fa89a",
-    thumbnail: "/projects/vitacore/thumbnail.svg",
     tech: [
       "Next.js 15",
       "React 19",
@@ -43,34 +46,39 @@ export const technicalProjects: TechnicalProject[] = [
       "open-rppg",
     ],
     problem:
-      "Maternal cardiovascular care is fragmented across pregnancy and postpartum — patients need continuity and insight, not another generic symptom tracker or AI doctor replacement.",
+      "Maternal cardiovascular care is fragmented across pregnancy and postpartum; care teams need a continuity-oriented surface—not a symptom tracker or “AI doctor”—to explore metrics, education, and guided demos.",
     bullets: [
-      "Built VitaCore as an intelligence layer with profile dashboard, health detail views, and a face-scan rPPG metrics hub (Watch / Face / Oura).",
-      "Implemented interactive care-chain demos: Missed Signal Replay, Interpretation Diff, Trajectory Engine, Community Map, and Prevention Coach.",
-      "Integrated open-rppg for live preview and BVP/HRV signals; all surfaced data is synthetic for demonstration only.",
+      "Collaborated on a multi-route Next.js app: home dashboard, health detail, face-scan rPPG hub (watch / face / fingertip modes), interactive care-chain demos, and a longitudinal passport view—all backed by synthetic demo data.",
+      "Integrated the face-scan flow with a Python rPPG service and documented iPhone HTTPS / ngrok setup for on-device camera testing.",
+      "Shipped a cohesive UI in Tailwind CSS 4 for hackathon judging and live walkthroughs.",
     ],
     role: "Team contributor · VenusHacks",
     github: "https://github.com/AarushiBK/VenusHacks",
-    timeline: "VenusHacks",
+    timeline: "Hackathon",
   },
   {
     id: "memmatch",
     title: "MemMatch",
     tagline:
-      "Color memory-matching game with peek phase, timer, and confetti win screen.",
+      "ICSSC WebJam memory-matching game — vanilla JS, expressive CSS, and keyboard-accessible cards.",
     accent: "#a89bb8",
-    thumbnail: "/projects/memmatch/thumbnail.svg",
-    tech: ["HTML5", "CSS3", "Vanilla JavaScript", "ICSSC WebJam"],
-    problem:
-      "Build a polished, keyboard-accessible browser game in a short hackathon window that demonstrates front-end craft and playful interaction design.",
-    bullets: [
-      "Implemented 12-card match logic with a 3.5s peek phase, move counter, live timer, toast feedback, and animated confetti on win.",
-      "Styled with CSS custom properties, grid layout, and 3D card transforms; all cards operable via Enter/Space.",
-      "Deployed as a static site on GitHub Pages for instant play without a backend.",
+    tech: [
+      "HTML5",
+      "CSS3",
+      "JavaScript (ES6+)",
+      "Syne & DM Sans",
+      "serve",
     ],
-    role: "Developer · ICSSC WebJam 2025",
+    problem:
+      "Ship a polished, playful browser game in a short sprint that shows layout, motion, and interaction craft without a heavy framework.",
+    bullets: [
+      "Built a 12-card match flow with a timed “peek” phase, move counter, live timer from first flip, toast feedback, and an animated win screen with final stats.",
+      "Styled with CSS custom properties, Grid, 3D flip transforms, and keyframe animation; responsive down to mobile.",
+      "All cards are focusable and operable with Enter or Space for keyboard accessibility.",
+    ],
+    role: "Developer · ICSSC WebJam",
     github: "https://github.com/vnavirr/webjam25",
-    demo: "https://vnavirr.github.io/webjam25/",
     timeline: "2025",
+    // No GitHub Pages site detected on the repo; add `demo` here if you publish one.
   },
 ];

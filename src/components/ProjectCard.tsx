@@ -1,9 +1,12 @@
+import { useState } from "react";
+
 type ProjectCardProps = {
   title: string;
   tagline: string;
   accent: string;
-  thumbnail?: string;
   badge?: string;
+  /** Public URL, e.g. `/projects/emoji-prediction.webp` */
+  thumbnail?: string;
   onOpen: () => void;
 };
 
@@ -11,11 +14,12 @@ export function ProjectCard({
   title,
   tagline,
   accent,
-  thumbnail,
   badge,
+  thumbnail,
   onOpen,
 }: ProjectCardProps) {
-  const alt = `${title} project preview`;
+  const [imgFailed, setImgFailed] = useState(false);
+  const showImage = Boolean(thumbnail) && !imgFailed;
 
   return (
     <button
@@ -23,28 +27,29 @@ export function ProjectCard({
       onClick={onOpen}
       className="group w-full cursor-pointer rounded-2xl border border-ink/6 bg-card text-left shadow-sm transition hover:-translate-y-1 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
     >
-      {thumbnail ? (
-        <div className="aspect-[16/10] w-full overflow-hidden rounded-t-2xl bg-cream">
+      <div className="relative aspect-[16/10] w-full overflow-hidden rounded-t-2xl">
+        {showImage ? (
           <img
             src={thumbnail}
-            alt={alt}
+            alt=""
             loading="lazy"
             decoding="async"
             className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.02]"
+            onError={() => setImgFailed(true)}
           />
-        </div>
-      ) : (
-        <div
-          className="aspect-[16/10] w-full rounded-t-2xl"
-          style={{
-            background: `linear-gradient(135deg, ${accent}55 0%, ${accent}22 50%, #f7f4ef 100%)`,
-          }}
-          aria-hidden
-        />
-      )}
+        ) : (
+          <div
+            className="h-full w-full"
+            style={{
+              background: `linear-gradient(135deg, ${accent}55 0%, ${accent}22 50%, #f7f4ef 100%)`,
+            }}
+            aria-hidden
+          />
+        )}
+      </div>
       <div className="px-6 py-5">
         {badge && (
-          <p className="mb-2 text-xs font-medium uppercase tracking-wider text-accent">
+          <p className="mb-2 text-xs font-medium tracking-wide text-accent">
             {badge}
           </p>
         )}

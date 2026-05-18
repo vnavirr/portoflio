@@ -1,28 +1,34 @@
 import type { DesignProject } from "../types";
 
+/**
+ * Thumbnails: add WebP under `public/projects/` and set `thumbnail`:
+ * - `/projects/hobscotch.webp`
+ * - `/projects/vitamind.webp`
+ *
+ * Modal gallery: set `images` with `/projects/<id>/screen-*.webp` when exports exist.
+ */
 export const designProjects: DesignProject[] = [
   {
     id: "hobscotch",
     title: "Hobscotch",
     tagline:
-      "Peer-to-peer skill barter app that turns learning into a path to real connection.",
+      "Peer-to-peer skill barter — teach watercolor for drums or baking — with matching on shared interests.",
     accent: "#d4a574",
-    thumbnail: "/projects/hobscotch/thumbnail.svg",
     badge: "Top 5 Finalist, Designathon 2026 Professional Track",
     overview:
-      "Hobscotch is a mobile barter platform where users trade skills as currency — teach watercolor in exchange for baking or drums — with matching built on mutual interests so first conversations start from shared goals, not awkward small talk.",
+      "Hobscotch is a mobile concept where users trade skills as currency and match on mutual interests so first conversations start from common ground instead of awkward networking.",
     problem:
-      "Over half of surveyed young adults feel small talk never becomes deep friendship. Skill learning is expensive, and YouTube tutorials lack accountability and human connection — the same barriers block both growth and lasting bonds.",
+      "Young adults are digitally connected yet socially isolated: over half of surveyed users felt small talk never becomes real friendship. Classes are expensive and solo video tutorials lack accountability and human warmth.",
     process: [
-      "Validated loneliness and learning pain points through surveys and interviews before locking direction",
-      "Brainstormed core flows with Gemini and Figma AI, then moved from wireframes to high-fidelity prototypes",
-      "Designed warm, low-stakes UI with casual photos and voice notes to humanize profiles before meetups",
-      "Addressed stranger-danger concerns by prioritizing low-stakes media over sterile ID verification",
+      "Survey and interview research to validate loneliness, motivation, and safety concerns around meeting strangers online",
+      "Used Gemini and Figma AI to pressure-test the core journey, then iterated from low- to high-fidelity Figma prototypes with a warm, low-stakes visual language",
+      "Balanced “stranger danger” with low-stakes media (casual photos, voice notes) to humanize profiles before in-person meetups",
+      "Re-scoped the audience after interviews showed college-student insights should not be over-generalized to post-grads",
     ],
     solution:
-      "A peer-to-peer skill exchange where time and talent are the only currency. Profiles emphasize personality and teachable skills; matching surfaces mutual interests so accountability and companionship grow organically from shared learning goals.",
+      "A barter-based learning network: profiles foreground personality and teachable skills, matching highlights overlapping interests, and the reward is both mastery and meaningful connection—not a certificate alone.",
     outcomes:
-      "Named Top 5 Finalist in the Designathon 2026 Professional Track. Research showed in-person, reciprocal teaching boosts accountability and helps surface-level chats grow into lasting bonds.",
+      "Named Top 5 Finalist in the Designathon 2026 Professional Track. Research underscored that in-person, reciprocal teaching boosts accountability and helps surface-level chats grow into lasting bonds.",
     links: [
       {
         label: "Devpost",
@@ -33,53 +39,34 @@ export const designProjects: DesignProject[] = [
         href: "https://www.figma.com/proto/LZQEc8DqUWKTmjJWirZor3/Hobscotch?node-id=40-1188&viewport=294%2C61%2C0.14&t=XElQsE7VDUqgj4oS-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=40%3A1188&show-proto-sidebar=1&page-id=7%3A3",
       },
     ],
-    images: [
-      {
-        src: "/projects/hobscotch/screen-1.svg",
-        caption: "Onboarding and skill barter concept",
-      },
-      {
-        src: "/projects/hobscotch/screen-2.svg",
-        caption: "Profile and mutual-interest matching",
-      },
-    ],
   },
   {
     id: "vitamind",
     title: "VitaMind",
     tagline:
-      "Nutrition app connecting vitamin intake to cognitive-health awareness.",
+      "Nutrition web app concept linking everyday meals to brain-health awareness for CareTech at UCI.",
     accent: "#7a9e8e",
-    thumbnail: "/projects/vitamind/thumbnail.svg",
     overview:
-      "VitaMind helps users track daily and weekly vitamin intake, analyze dietary habits, and understand how nutrition may relate to cognitive health — making preventive brain wellness approachable rather than clinical.",
+      "VitaMind pairs calm, understandable UI with nutrition logging so users can spot patterns and learn how diet may relate to long-term cognitive wellness—without feeling like a clinical dashboard.",
     problem:
-      "Many people lack clear, actionable feedback on how diet relates to long-term cognitive health outside formal medical settings, especially for early disease detection goals at CareTech.",
+      "People outside formal care settings rarely get actionable, trustworthy feedback on how everyday eating patterns connect to cognitive health risk.",
     process: [
-      "Defined flows for logging meals, tracking vitamins, and surfacing personalized insights",
-      "Designed information hierarchy so medical concepts stay understandable in Figma",
-      "Aligned UX with CareTech at UCI engineering (React/Next frontend, FastAPI backend)",
-      "Iterated on goal-based progress tracking and food categorization patterns",
+      "Mapped flows for logging meals, reviewing insights, and surfacing educational guidance in plain language",
+      "Tuned information hierarchy so medical concepts stay approachable while remaining credible",
+      "High-fidelity Figma screens aligned with the CareTech engineering codebase for feasibility",
     ],
     solution:
-      "A calm, data-informed interface for vitamin logging, cognitive-health insights, and recommendations — paired with an open-source CareTech codebase for implementation feasibility.",
+      "A restrained, data-informed experience that highlights nutrition trends, contextual education, and gentle prompts—supporting preventive cognitive wellness as a habit, not a scare tactic.",
     outcomes:
-      "Bridged product design with CareTech's vitamin-tracking stack (TensorFlow, YOLO, Roboflow datasets) so UX intent maps to a real full-stack health-tech product.",
+      "Bridged UX intent with the open-source vitamin-tracking repo at UCI so design decisions map to real implementation constraints.",
     links: [
       {
-        label: "Figma design",
+        label: "Figma",
         href: "https://www.figma.com/design/IQROQUbF5nicZQOVBusosl/VitaMind?node-id=2-3&t=FTHMcbWPtt4sQ3hu-1",
       },
-    ],
-    github: "https://github.com/CareTech-at-UCI/vitamin-tracking",
-    images: [
       {
-        src: "/projects/vitamind/screen-1.svg",
-        caption: "Dashboard and vitamin intake overview",
-      },
-      {
-        src: "/projects/vitamind/screen-2.svg",
-        caption: "Insights and cognitive-health guidance",
+        label: "GitHub",
+        href: "https://github.com/CareTech-at-UCI/vitamin-tracking",
       },
     ],
   },

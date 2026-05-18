@@ -1,15 +1,21 @@
 import { useEffect, useId, useRef, type ReactNode } from "react";
 import { useScrollLock } from "../hooks/useScrollLock";
 
-const FOCUSABLE =
-  'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
-
 type ModalProps = {
   open: boolean;
   title: string;
   onClose: () => void;
   children: ReactNode;
 };
+
+const FOCUSABLE_SELECTOR =
+  'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+function getFocusable(container: HTMLElement): HTMLElement[] {
+  return Array.from(container.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR)).filter(
+    (el) => !el.hasAttribute("disabled") && el.getAttribute("aria-hidden") !== "true",
+  );
+}
 
 export function Modal({ open, title, onClose, children }: ModalProps) {
   const titleId = useId();
@@ -21,48 +27,51 @@ export function Modal({ open, title, onClose, children }: ModalProps) {
   useEffect(() => {
     if (open) {
       triggerRef.current = document.activeElement as HTMLElement | null;
-      panelRef.current?.focus();
+      requestAnimationFrame(() => {
+        const panel = panelRef.current;
+        if (!panel) return;
+        const focusable = getFocusable(panel);
+        (focusable[0] ?? panel).focus();
+      });
     } else if (triggerRef.current) {
       triggerRef.current.focus();
-      triggerRef.current = null;
     }
   }, [open]);
 
   useEffect(() => {
     if (!open) return;
+
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [open, onClose]);
-
-  useEffect(() => {
-    if (!open || !panelRef.current) return;
-
-    const panel = panelRef.current;
-    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        onClose();
+        return;
+      }
       if (e.key !== "Tab") return;
-      const focusable = Array.from(
-        panel.querySelectorAll<HTMLElement>(FOCUSABLE),
-      ).filter((el) => el.offsetParent !== null);
+
+      const panel = panelRef.current;
+      if (!panel) return;
+
+      const focusable = getFocusable(panel);
       if (focusable.length === 0) return;
 
       const first = focusable[0];
       const last = focusable[focusable.length - 1];
+      const active = document.activeElement as HTMLElement | null;
 
-      if (e.shiftKey && document.activeElement === first) {
-        e.preventDefault();
-        last.focus();
-      } else if (!e.shiftKey && document.activeElement === last) {
+      if (e.shiftKey) {
+        if (active === first || !panel.contains(active)) {
+          e.preventDefault();
+          last.focus();
+        }
+      } else if (active === last) {
         e.preventDefault();
         first.focus();
       }
     };
 
-    panel.addEventListener("keydown", onKeyDown);
-    return () => panel.removeEventListener("keydown", onKeyDown);
-  }, [open]);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open, onClose]);
 
   if (!open) return null;
 
@@ -73,7 +82,8 @@ export function Modal({ open, title, onClose, children }: ModalProps) {
     >
       <button
         type="button"
-        className="absolute inset-0 bg-ink/40 backdrop-blur-[2px]"
+        tabIndex={-1}
+        className="absolute inset-0 cursor-default bg-ink/40 backdrop-blur-[2px]"
         aria-label="Close dialog"
         onClick={onClose}
       />
@@ -107,7 +117,7 @@ export function Modal({ open, title, onClose, children }: ModalProps) {
             </svg>
           </button>
         </header>
-        <div className="overflow-y-auto px-6 py-6">{children}</div>
+        <div className="overflow-y-auto overflow-x-hidden px-6 py-6">{children}</div>
       </div>
     </div>
   );
