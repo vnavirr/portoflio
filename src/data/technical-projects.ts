@@ -31,6 +31,7 @@ export const technicalProjects: TechnicalProject[] = [
     role: "Developer · ICS / Datathon-style course project",
     github: "https://github.com/vnavirr/d26-emoji-in-tweets",
     timeline: "Course project",
+    thumbnail: "/projects/emoji-prediction.png",
   },
   {
     id: "vitacore",
@@ -55,6 +56,7 @@ export const technicalProjects: TechnicalProject[] = [
     role: "Team contributor · VenusHacks",
     github: "https://github.com/AarushiBK/VenusHacks",
     timeline: "Hackathon",
+    thumbnail: "/VitaCore.png",
   },
   {
     id: "memmatch",
@@ -79,6 +81,7 @@ export const technicalProjects: TechnicalProject[] = [
     role: "Developer · ICSSC WebJam",
     github: "https://github.com/vnavirr/webjam25",
     timeline: "2025",
+    thumbnail: "/memMatch.png",
     // No GitHub Pages site detected on the repo; add `demo` here if you publish one.
   },
 ];

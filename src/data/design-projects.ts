@@ -39,6 +39,7 @@ export const designProjects: DesignProject[] = [
         href: "https://www.figma.com/proto/LZQEc8DqUWKTmjJWirZor3/Hobscotch?node-id=40-1188&viewport=294%2C61%2C0.14&t=XElQsE7VDUqgj4oS-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=40%3A1188&show-proto-sidebar=1&page-id=7%3A3",
       },
     ],
+    thumbnail: "/hobscotch.png",
   },
   {
     id: "vitamind",
@@ -69,5 +70,6 @@ export const designProjects: DesignProject[] = [
         href: "https://github.com/CareTech-at-UCI/vitamin-tracking",
       },
     ],
+    thumbnail: "/VitaMind.png",
   },
 ];

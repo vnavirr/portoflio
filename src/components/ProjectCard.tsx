@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type ProjectCardProps = {
   title: string;
@@ -19,6 +19,11 @@ export function ProjectCard({
   onOpen,
 }: ProjectCardProps) {
   const [imgFailed, setImgFailed] = useState(false);
+
+  useEffect(() => {
+    setImgFailed(false);
+  }, [thumbnail]);
+
   const showImage = Boolean(thumbnail) && !imgFailed;
 
   return (
@@ -30,6 +35,7 @@ export function ProjectCard({
       <div className="relative aspect-[16/10] w-full overflow-hidden rounded-t-2xl">
         {showImage ? (
           <img
+            key={thumbnail}
             src={thumbnail}
             alt=""
             loading="lazy"
