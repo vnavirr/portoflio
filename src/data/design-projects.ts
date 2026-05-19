@@ -70,6 +70,6 @@ export const designProjects: DesignProject[] = [
         href: "https://github.com/CareTech-at-UCI/vitamin-tracking",
       },
     ],
-    thumbnail: "/VitaMind.png",
+    thumbnail: "/projects/vitamind.jpg",
   },
 ];

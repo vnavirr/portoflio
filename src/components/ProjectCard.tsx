@@ -30,9 +30,9 @@ export function ProjectCard({
     <button
       type="button"
       onClick={onOpen}
-      className="group w-full cursor-pointer rounded-2xl border border-secondary/50 bg-card text-left shadow-sm transition hover:-translate-y-1 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+      className="group flex w-full cursor-pointer flex-col overflow-hidden rounded-2xl border border-secondary/50 bg-card p-0 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
     >
-      <div className="relative aspect-[16/10] w-full overflow-hidden rounded-t-2xl">
+      <div className="relative aspect-[16/10] w-full shrink-0 overflow-hidden rounded-t-2xl bg-cream">
         {showImage ? (
           <img
             key={thumbnail}
@@ -40,12 +40,12 @@ export function ProjectCard({
             alt=""
             loading="lazy"
             decoding="async"
-            className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.02]"
+            className="absolute inset-0 !size-full !max-h-none !max-w-none object-cover object-center transition duration-300 group-hover:scale-[1.02]"
             onError={() => setImgFailed(true)}
           />
         ) : (
           <div
-            className="h-full w-full"
+            className="absolute inset-0 size-full"
             style={{
               background: `linear-gradient(135deg, ${accent}55 0%, ${accent}22 50%, #fff9f4 100%)`,
             }}
