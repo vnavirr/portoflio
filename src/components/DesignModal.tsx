@@ -13,7 +13,7 @@ export function DesignModal({ project, onClose }: DesignModalProps) {
     <Modal open={!!project} title={project.title} onClose={onClose}>
       <div className="space-y-6 text-ink-muted">
         {project.badge && (
-          <p className="text-sm font-medium text-primary">{project.badge}</p>
+          <p className="text-caption text-primary">{project.badge}</p>
         )}
 
         <CaseBlock title="Overview" body={project.overview} />
@@ -35,7 +35,7 @@ export function DesignModal({ project, onClose }: DesignModalProps) {
 
         {project.images && project.images.length > 0 && (
           <section className="space-y-4">
-            <h3 className="font-sans text-sm font-semibold uppercase tracking-wide text-ink">
+            <h3 className="font-serif text-sm font-semibold uppercase tracking-wide text-ink">
               Screens
             </h3>
             <ul className="space-y-6">
@@ -49,7 +49,7 @@ export function DesignModal({ project, onClose }: DesignModalProps) {
                       decoding="async"
                       className="w-full object-cover"
                     />
-                    <figcaption className="border-t border-ink/8 px-4 py-3 text-sm text-ink-muted">
+                    <figcaption className="text-caption border-t border-ink/8 px-4 py-3 text-ink-muted">
                       {img.caption}
                     </figcaption>
                   </figure>
@@ -66,7 +66,7 @@ export function DesignModal({ project, onClose }: DesignModalProps) {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-card transition hover:opacity-90"
+              className="text-caption inline-flex items-center rounded-full bg-primary px-5 py-2.5 text-card transition hover:opacity-90"
             >
               {link.label}
             </a>
@@ -76,7 +76,7 @@ export function DesignModal({ project, onClose }: DesignModalProps) {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center rounded-full border border-primary/30 px-5 py-2.5 text-sm font-medium text-ink transition hover:border-primary hover:text-primary"
+              className="text-caption inline-flex items-center rounded-full border border-primary/30 px-5 py-2.5 text-ink transition hover:border-primary hover:text-primary"
             >
               GitHub
             </a>

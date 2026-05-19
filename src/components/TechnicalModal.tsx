@@ -13,7 +13,7 @@ export function TechnicalModal({ project, onClose }: TechnicalModalProps) {
     <Modal open={!!project} title={project.title} onClose={onClose}>
       <div className="space-y-6 text-ink-muted">
         {project.timeline && (
-          <p className="font-sans text-sm font-medium uppercase tracking-wider text-primary">
+          <p className="text-caption uppercase tracking-wider text-primary">
             {project.timeline}
           </p>
         )}
@@ -51,7 +51,7 @@ export function TechnicalModal({ project, onClose }: TechnicalModalProps) {
             {project.tech.map((t) => (
               <li
                 key={t}
-                className="rounded-full border border-ink/10 bg-cream px-3 py-1 text-sm text-ink"
+                className="text-caption text-ink rounded-full border border-ink/10 bg-cream px-3 py-1"
               >
                 {t}
               </li>
@@ -64,7 +64,7 @@ export function TechnicalModal({ project, onClose }: TechnicalModalProps) {
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-card transition hover:opacity-90"
+            className="text-caption inline-flex items-center rounded-full bg-primary px-5 py-2.5 text-card transition hover:opacity-90"
           >
             View on GitHub
           </a>
@@ -73,7 +73,7 @@ export function TechnicalModal({ project, onClose }: TechnicalModalProps) {
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center rounded-full border border-primary/30 px-5 py-2.5 text-sm font-medium text-ink transition hover:border-primary hover:text-primary"
+              className="text-caption inline-flex items-center rounded-full border border-primary/30 px-5 py-2.5 text-ink transition hover:border-primary hover:text-primary"
             >
               Live demo
             </a>

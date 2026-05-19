@@ -65,6 +65,14 @@ body {
   line-height: 1.5;
 }
 
+/** Small Didact Gothic UI — use instead of text-sm + font-medium (Didact has no 500/600). */
+@utility text-caption {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  line-height: var(--text-sm--line-height);
+  font-weight: 400;
+}
+
 .hero-gradient {
   background-color: var(--color-background);
   background-image: radial-gradient(

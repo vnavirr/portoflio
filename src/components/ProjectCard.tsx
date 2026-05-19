@@ -55,7 +55,7 @@ export function ProjectCard({
       </div>
       <div className="px-6 py-5">
         {badge && (
-          <p className="mb-2 text-sm font-medium tracking-wide text-primary">
+          <p className="text-caption mb-2 tracking-wide text-primary">
             {badge}
           </p>
         )}
