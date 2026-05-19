@@ -1,8 +1,6 @@
 # Vaishnavi Raghu — Portfolio
 
-Personal portfolio site for **Vaishnavi Raghu**, an aspiring software engineer and UI/UX designer studying Computer Science at UC Irvine. The site showcases technical projects and UX case studies in one place.
-
-**Design source:** This site was implemented from my Figma portfolio design — [Portfolio (Figma)](https://www.figma.com/design/nsqEDeJenXIT60W9onRHaP/Portfolio?node-id=0-1&t=l5KpWsiv64o0wlSC-1).
+Hi, I'm **Vaishnavi Raghu**, an aspiring software engineer and UI/UX designer studying Computer Science at UC Irvine. My site showcases my technical projects and UX case studies.
 
 ## About
 
@@ -39,43 +37,4 @@ Click any card on the site for full details (problem, what I built, role, tech s
 - [Tailwind CSS 4](https://tailwindcss.com/)
 - Fonts: [Playfair Display](https://fonts.google.com/specimen/Playfair+Display) (headings), [Didact Gothic](https://fonts.google.com/specimen/Didact+Gothic) (body)
 
-Project content lives in `src/data/technical-projects.ts` and `src/data/design-projects.ts`. Cover images are in `public/` (see `public/projects/README.md`).
-
-## Setup
-
-```bash
-npm install
-npm run dev
-```
-
-Open the URL shown in the terminal (typically `http://localhost:5173`).
-
-```bash
-npm run build    # production build → dist/
-npm run preview  # preview dist/ locally
-```
-
-## Resume
-
-Add your PDF to `public/resume.pdf`. The nav **Resume** link opens `/resume.pdf` in a new tab.
-
-Until the file exists, you may see a 404 in production—that is expected until you upload the PDF. A placeholder note remains at `public/resume.pdf.placeholder`.
-
-## Open Graph / social previews
-
-- `public/og.png` — default **1200×630** preview image referenced from `index.html`. Consider running it through [Squoosh](https://squoosh.app/) or similar if the file is large.
-- After you know your production origin, update `og:image` and `twitter:image` in `index.html` to an **absolute** `https://…/og.png` URL if a crawler (e.g. LinkedIn) requires it.
-
-## Deploy (Vercel)
-
-1. Push this repo to GitHub.
-2. Import the project in [Vercel](https://vercel.com); it will detect Vite and run `npm run build`.
-3. Optional `vercel.json` in the repo root sets `buildCommand` and `outputDirectory` explicitly.
-
-### Custom domain
-
-In the Vercel project → **Settings → Domains**, add your domain and follow DNS instructions. No code changes are required for a root domain once DNS propagates.
-
-### GitHub Pages (alternative)
-
-Set `base` in `vite.config.ts` to your repo name (e.g. `/repo-name/`) when not using a custom domain, then publish `dist/` to the `gh-pages` branch or GitHub Actions.
+**Design source:** This site was implemented from my Figma design — [Portfolio Design](https://www.figma.com/design/nsqEDeJenXIT60W9onRHaP/Portfolio?node-id=0-1&t=l5KpWsiv64o0wlSC-1).
