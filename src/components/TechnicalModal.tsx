@@ -51,7 +51,7 @@ export function TechnicalModal({ project, onClose }: TechnicalModalProps) {
             {project.tech.map((t) => (
               <li
                 key={t}
-                className="text-caption text-ink rounded-full border border-ink/10 bg-cream px-3 py-1"
+                className="text-caption rounded-full border border-accent/30 bg-accent/15 px-3 py-1 text-ink"
               >
                 {t}
               </li>
