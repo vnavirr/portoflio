@@ -50,9 +50,12 @@ const social = [
 
 export function Hero() {
   return (
-    <section id="hero" className="hero-gradient scroll-mt-0">
-      <PageContainer>
-        <div className="grid w-full items-center gap-10 py-16 md:py-20 lg:grid-cols-[minmax(0,1fr)_clamp(220px,20vw,320px)] lg:gap-12 lg:py-24">
+    <section
+      id="hero"
+      className="hero-gradient flex min-h-[calc(100dvh-var(--nav-height))] min-h-[calc(100svh-var(--nav-height))] scroll-mt-0 flex-col"
+    >
+      <PageContainer className="flex flex-1 flex-col justify-center py-8 md:py-10">
+        <div className="grid w-full items-center gap-10 lg:grid-cols-[minmax(0,1fr)_clamp(220px,20vw,320px)] lg:gap-12">
         <div className="min-w-0">
           <h1 className="text-header text-ink lg:whitespace-nowrap">
             Hi, I&apos;m{" "}

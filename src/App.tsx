@@ -24,6 +24,8 @@ export default function App() {
       document.getElementById(id),
     ).filter(Boolean) as HTMLElement[];
 
+    const hero = document.getElementById("hero");
+
     const observer = new IntersectionObserver(
       (entries) => {
         const visible = entries
@@ -36,8 +38,21 @@ export default function App() {
       { rootMargin: "-30% 0px -55% 0px", threshold: [0, 0.25, 0.5] },
     );
 
+    const heroObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry?.isIntersecting) {
+          setActiveSection(null);
+        }
+      },
+      { threshold: 0.4 },
+    );
+
     sections.forEach((s) => observer.observe(s));
-    return () => observer.disconnect();
+    if (hero) heroObserver.observe(hero);
+    return () => {
+      observer.disconnect();
+      heroObserver.disconnect();
+    };
   }, []);
 
   return (

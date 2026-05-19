@@ -40,5 +40,6 @@ export const SITE = {
   devpost: "https://devpost.com/vnavirr",
   email: "vnavirr@gmail.com",
   resumePath: "/resume.pdf",
-  profileImage: "/profile_pic.jpg",
+  /** Served from public/; ?v busts cache after replacing the file */
+  profileImage: "/profile_pic.jpg?v=2",
 } as const;
