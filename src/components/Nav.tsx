@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type MouseEvent } from "react";
 import { PageContainer } from "./PageContainer";
 import { SITE } from "../types";
 
@@ -25,13 +25,20 @@ export function Nav({ activeSection }: NavProps) {
       activeSection === id ? "font-medium" : ""
     }`;
 
+  const scrollToTop = (e: MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    setOpen(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    history.replaceState(null, "", window.location.pathname + window.location.search);
+  };
+
   return (
     <header className="sticky top-0 z-40 bg-secondary">
       <PageContainer className="flex items-center justify-between py-4">
         <a
-          href="#hero"
+          href="/"
           className="font-serif text-xl font-semibold tracking-tight text-ink transition-colors hover:text-primary md:text-2xl"
-          onClick={() => setOpen(false)}
+          onClick={scrollToTop}
         >
           {SITE.name}
         </a>
