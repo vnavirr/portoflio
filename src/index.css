@@ -68,7 +68,7 @@ body {
 .hero-gradient {
   background-color: var(--color-background);
   background-image: radial-gradient(
-    ellipse 80% 60% at 85% 15%,
+    ellipse 80% 60% at 85% 50%,
     color-mix(in srgb, var(--color-secondary) 55%, transparent),
     transparent 70%
   );
