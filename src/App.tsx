@@ -72,6 +72,7 @@ export default function App() {
               title={project.title}
               tagline={project.tagline}
               accent={project.accent}
+              badge={project.timeline}
               thumbnail={project.thumbnail}
               onOpen={() => {
                 setDesignOpen(null);

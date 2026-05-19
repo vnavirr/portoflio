@@ -13,7 +13,7 @@ export function TechnicalModal({ project, onClose }: TechnicalModalProps) {
     <Modal open={!!project} title={project.title} onClose={onClose}>
       <div className="space-y-6 text-ink-muted">
         {project.timeline && (
-          <p className="text-caption uppercase tracking-wider text-primary">
+          <p className="text-caption tracking-wide text-primary">
             {project.timeline}
           </p>
         )}

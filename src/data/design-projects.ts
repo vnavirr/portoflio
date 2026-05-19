@@ -14,7 +14,7 @@ export const designProjects: DesignProject[] = [
     tagline:
       "Peer-to-peer skill barter — teach watercolor for drums or baking — with matching on shared interests.",
     accent: "#c36475",
-    badge: "Top 5 Finalist, Designathon 2026 Professional Track",
+    badge: "Top 5 Finalist, UCI Designathon 2026 Professional Track",
     overview:
       "Hobscotch is a mobile concept where users trade skills as currency and match on mutual interests so first conversations start from common ground instead of awkward networking.",
     problem:
@@ -47,6 +47,7 @@ export const designProjects: DesignProject[] = [
     tagline:
       "Nutrition web app concept linking everyday meals to brain-health awareness for CareTech at UCI.",
     accent: "#a0b799",
+    badge: "UCI Caretech UI/UX Committee",
     overview:
       "VitaMind pairs calm, understandable UI with nutrition logging so users can spot patterns and learn how diet may relate to long-term cognitive wellness—without feeling like a clinical dashboard.",
     problem:
