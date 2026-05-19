@@ -42,7 +42,7 @@ const social = [
     external: true,
     icon: (
       <svg className="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-        <path d="M6 4h9.5L18 8.5V20H6V4zm2 2v14h8V9h-5V6H8zm2 2h3v3h-3V8z" />
+        <path d="M6.002 1.61L0 12.004L6.002 22.39h11.996L24 12.004L17.998 1.61zm1.593 4.084h3.947c3.605 0 6.276 1.695 6.276 6.31c0 4.436-3.21 6.302-6.456 6.302H7.595zm2.517 2.449v7.714h1.241c2.646 0 3.862-1.55 3.862-3.861c.009-2.569-1.096-3.853-3.767-3.853Z" />
       </svg>
     ),
   },
@@ -76,7 +76,7 @@ export function Hero() {
                   {...("external" in item && item.external
                     ? { target: "_blank", rel: "noopener noreferrer" }
                     : {})}
-                  className="text-alt inline-flex items-center gap-2.5 text-ink transition hover:text-primary"
+                  className="text-alt inline-flex items-center gap-2.5 text-ink transition-colors hover:text-accent"
                 >
                   {item.icon}
                   <span>{item.label}</span>
