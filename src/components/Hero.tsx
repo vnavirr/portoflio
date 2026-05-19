@@ -1,4 +1,3 @@
-import profilePic from "../assets/profile_pic.jpg";
 import { PageContainer } from "./PageContainer";
 import { SITE } from "../types";
 
@@ -87,7 +86,7 @@ export function Hero() {
         <div className="mx-auto w-full max-w-xs sm:max-w-sm lg:max-w-none lg:justify-self-end">
           <div className="relative aspect-square w-full min-w-[220px] overflow-hidden rounded-full border-4 border-secondary bg-secondary/30 shadow-lg ring-4 ring-background">
             <img
-              src={profilePic}
+              src={SITE.profileImage}
               alt="Portrait of Vaishnavi Raghu"
               width={480}
               height={480}
