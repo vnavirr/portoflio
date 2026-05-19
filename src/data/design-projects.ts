@@ -13,7 +13,7 @@ export const designProjects: DesignProject[] = [
     title: "Hobscotch",
     tagline:
       "Peer-to-peer skill barter — teach watercolor for drums or baking — with matching on shared interests.",
-    accent: "#d4a574",
+    accent: "#c36475",
     badge: "Top 5 Finalist, Designathon 2026 Professional Track",
     overview:
       "Hobscotch is a mobile concept where users trade skills as currency and match on mutual interests so first conversations start from common ground instead of awkward networking.",
@@ -45,7 +45,7 @@ export const designProjects: DesignProject[] = [
     title: "VitaMind",
     tagline:
       "Nutrition web app concept linking everyday meals to brain-health awareness for CareTech at UCI.",
-    accent: "#7a9e8e",
+    accent: "#a0b799",
     overview:
       "VitaMind pairs calm, understandable UI with nutrition logging so users can spot patterns and learn how diet may relate to long-term cognitive wellness—without feeling like a clinical dashboard.",
     problem:

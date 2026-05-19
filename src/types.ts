@@ -37,6 +37,8 @@ export const SITE = {
   name: "Vaishnavi Raghu",
   github: "https://github.com/vnavirr",
   linkedin: "https://www.linkedin.com/in/vnavirr",
+  devpost: "https://devpost.com/vnavirr",
   email: "vnavirr@gmail.com",
   resumePath: "/resume.pdf",
+  profileImage: "/profile_pic.jpg",
 } as const;

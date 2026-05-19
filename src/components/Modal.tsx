@@ -98,7 +98,7 @@ export function Modal({ open, title, onClose, children }: ModalProps) {
         <header className="flex shrink-0 items-start justify-between gap-4 border-b border-ink/8 px-6 py-5">
           <h2
             id={titleId}
-            className="pr-8 font-serif text-3xl font-semibold text-ink"
+            className="text-subheader pr-8 font-semibold text-ink"
           >
             {title}
           </h2>

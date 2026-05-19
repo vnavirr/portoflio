@@ -25,7 +25,7 @@ export function ProjectCard({
     <button
       type="button"
       onClick={onOpen}
-      className="group w-full cursor-pointer rounded-2xl border border-ink/6 bg-card text-left shadow-sm transition hover:-translate-y-1 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+      className="group w-full cursor-pointer rounded-2xl border border-secondary/50 bg-card text-left shadow-sm transition hover:-translate-y-1 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
     >
       <div className="relative aspect-[16/10] w-full overflow-hidden rounded-t-2xl">
         {showImage ? (
@@ -41,7 +41,7 @@ export function ProjectCard({
           <div
             className="h-full w-full"
             style={{
-              background: `linear-gradient(135deg, ${accent}55 0%, ${accent}22 50%, #f7f4ef 100%)`,
+              background: `linear-gradient(135deg, ${accent}55 0%, ${accent}22 50%, #fff9f4 100%)`,
             }}
             aria-hidden
           />
@@ -49,14 +49,14 @@ export function ProjectCard({
       </div>
       <div className="px-6 py-5">
         {badge && (
-          <p className="mb-2 text-xs font-medium tracking-wide text-accent">
+          <p className="mb-2 text-sm font-medium tracking-wide text-primary">
             {badge}
           </p>
         )}
-        <h3 className="font-serif text-2xl font-semibold text-ink group-hover:text-accent">
+        <h3 className="text-main font-semibold text-ink group-hover:text-primary">
           {title}
         </h3>
-        <p className="mt-2 text-base leading-relaxed text-ink-muted">{tagline}</p>
+        <p className="text-alt mt-2 leading-relaxed text-ink-muted">{tagline}</p>
       </div>
     </button>
   );

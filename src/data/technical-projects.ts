@@ -12,7 +12,7 @@ export const technicalProjects: TechnicalProject[] = [
     title: "Emoji Prediction Model",
     tagline:
       "Classical NLP + ML notebooks that predict which of 10 emoji classes originally appeared in a tweet.",
-    accent: "#c4a882",
+    accent: "#c36475",
     tech: [
       "Python",
       "Google Colab",
@@ -37,7 +37,7 @@ export const technicalProjects: TechnicalProject[] = [
     title: "VitaCore",
     tagline:
       "VenusHacks build — VITASCORE, an intelligence layer for fragmented maternal cardiovascular care (demo data).",
-    accent: "#8fa89a",
+    accent: "#a0b799",
     tech: [
       "Next.js 15",
       "React 19",
@@ -61,7 +61,7 @@ export const technicalProjects: TechnicalProject[] = [
     title: "MemMatch",
     tagline:
       "ICSSC WebJam memory-matching game — vanilla JS, expressive CSS, and keyboard-accessible cards.",
-    accent: "#a89bb8",
+    accent: "#f0b8b9",
     tech: [
       "HTML5",
       "CSS3",

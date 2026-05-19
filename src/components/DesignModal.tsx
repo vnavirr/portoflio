@@ -13,7 +13,7 @@ export function DesignModal({ project, onClose }: DesignModalProps) {
     <Modal open={!!project} title={project.title} onClose={onClose}>
       <div className="space-y-6 text-ink-muted">
         {project.badge && (
-          <p className="text-sm font-medium text-accent">{project.badge}</p>
+          <p className="text-sm font-medium text-primary">{project.badge}</p>
         )}
 
         <CaseBlock title="Overview" body={project.overview} />
@@ -66,7 +66,7 @@ export function DesignModal({ project, onClose }: DesignModalProps) {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-cream transition hover:bg-accent"
+              className="inline-flex items-center rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-card transition hover:opacity-90"
             >
               {link.label}
             </a>
@@ -76,7 +76,7 @@ export function DesignModal({ project, onClose }: DesignModalProps) {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center rounded-full border border-ink/15 px-5 py-2.5 text-sm font-medium text-ink transition hover:border-accent hover:text-accent"
+              className="inline-flex items-center rounded-full border border-primary/30 px-5 py-2.5 text-sm font-medium text-ink transition hover:border-primary hover:text-primary"
             >
               GitHub
             </a>

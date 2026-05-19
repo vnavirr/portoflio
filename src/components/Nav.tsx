@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { PageContainer } from "./PageContainer";
 import { SITE } from "../types";
 
 const links = [
@@ -20,16 +21,16 @@ export function Nav({ activeSection }: NavProps) {
   }, []);
 
   const navLinkClass = (id: string) =>
-    `text-sm tracking-wide transition-colors hover:text-accent ${
-      activeSection === id ? "text-accent font-medium" : "text-ink-muted"
+    `text-alt transition-colors hover:text-primary ${
+      activeSection === id ? "font-medium text-primary" : "text-ink"
     }`;
 
   return (
-    <header className="sticky top-0 z-40 border-b border-ink/5 bg-cream/90 backdrop-blur-md">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4 md:px-8">
+    <header className="sticky top-0 z-40 bg-secondary">
+      <PageContainer className="flex items-center justify-between py-4">
         <a
           href="#hero"
-          className="font-serif text-xl font-semibold tracking-tight text-ink"
+          className="font-serif text-xl font-semibold tracking-tight text-ink md:text-2xl"
           onClick={() => setOpen(false)}
         >
           {SITE.name}
@@ -49,7 +50,7 @@ export function Nav({ activeSection }: NavProps) {
             href={SITE.resumePath}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full border border-ink/15 bg-card px-4 py-1.5 text-sm font-medium text-ink transition hover:border-accent hover:text-accent"
+            className="rounded-full bg-card px-6 py-2 text-alt font-normal text-ink shadow-sm transition hover:shadow-md"
           >
             Resume
           </a>
@@ -57,13 +58,12 @@ export function Nav({ activeSection }: NavProps) {
 
         <button
           type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-md border border-ink/10 md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-md border border-ink/15 text-ink md:hidden"
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((v) => !v)}
         >
-          <span className="sr-only">Toggle menu</span>
           {open ? (
             <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden>
               <path
@@ -82,20 +82,17 @@ export function Nav({ activeSection }: NavProps) {
             </svg>
           )}
         </button>
-      </div>
+      </PageContainer>
 
       {open && (
-        <nav
-          id="mobile-menu"
-          className="border-t border-ink/5 px-6 py-6 md:hidden"
-          aria-label="Mobile"
-        >
-          <ul className="flex flex-col gap-4 font-serif text-2xl">
+        <PageContainer className="border-t border-primary/10 py-6 md:hidden">
+          <nav id="mobile-menu" aria-label="Mobile">
+          <ul className="flex flex-col gap-4">
             {links.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="text-ink hover:text-accent"
+                  className="text-main text-ink hover:text-primary"
                   onClick={() => setOpen(false)}
                 >
                   {link.label}
@@ -107,14 +104,15 @@ export function Nav({ activeSection }: NavProps) {
                 href={SITE.resumePath}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-ink hover:text-accent"
+                className="inline-block rounded-full bg-card px-6 py-2 text-alt text-ink shadow-sm"
                 onClick={() => setOpen(false)}
               >
                 Resume
               </a>
             </li>
           </ul>
-        </nav>
+          </nav>
+        </PageContainer>
       )}
     </header>
   );
