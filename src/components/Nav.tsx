@@ -21,8 +21,8 @@ export function Nav({ activeSection }: NavProps) {
   }, []);
 
   const navLinkClass = (id: string) =>
-    `text-alt transition-colors hover:text-primary ${
-      activeSection === id ? "font-medium text-primary" : "text-ink"
+    `text-alt text-ink transition-colors hover:text-primary ${
+      activeSection === id ? "font-medium" : ""
     }`;
 
   return (
@@ -30,7 +30,7 @@ export function Nav({ activeSection }: NavProps) {
       <PageContainer className="flex items-center justify-between py-4">
         <a
           href="#hero"
-          className="font-serif text-xl font-semibold tracking-tight text-ink md:text-2xl"
+          className="font-serif text-xl font-semibold tracking-tight text-ink transition-colors hover:text-primary md:text-2xl"
           onClick={() => setOpen(false)}
         >
           {SITE.name}
@@ -50,7 +50,7 @@ export function Nav({ activeSection }: NavProps) {
             href={SITE.resumePath}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-card px-6 py-2 text-alt font-normal text-ink shadow-sm transition hover:shadow-md"
+            className="rounded-full bg-card px-6 py-2 text-alt font-normal text-ink shadow-sm transition-colors hover:text-primary hover:shadow-md"
           >
             Resume
           </a>
@@ -104,7 +104,7 @@ export function Nav({ activeSection }: NavProps) {
                 href={SITE.resumePath}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block rounded-full bg-card px-6 py-2 text-alt text-ink shadow-sm"
+                className="inline-block rounded-full bg-card px-6 py-2 text-alt text-ink shadow-sm transition-colors hover:text-primary"
                 onClick={() => setOpen(false)}
               >
                 Resume
