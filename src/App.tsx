@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { designProjects } from "./data/design-projects";
 import { technicalProjects } from "./data/technical-projects";
 import { DesignModal } from "./components/DesignModal";
-import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
 import { Nav } from "./components/Nav";
 import { ProjectCard } from "./components/ProjectCard";
@@ -103,8 +102,6 @@ export default function App() {
           ))}
         </ProjectSection>
       </main>
-
-      <Footer />
 
       <TechnicalModal
         project={technicalOpen}
