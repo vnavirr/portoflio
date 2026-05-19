@@ -67,9 +67,7 @@ export const technicalProjects: TechnicalProject[] = [
     tech: [
       "HTML5",
       "CSS3",
-      "JavaScript (ES6+)",
-      "Syne & DM Sans",
-      "serve",
+      "JavaScript"
     ],
     problem:
       "Ship a polished, playful browser game in a short sprint that shows layout, motion, and interaction craft without a heavy framework.",
