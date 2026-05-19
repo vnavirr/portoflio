@@ -55,7 +55,7 @@ export function Hero() {
       className="hero-gradient flex min-h-[calc(100dvh-var(--nav-height))] min-h-[calc(100svh-var(--nav-height))] scroll-mt-0 flex-col"
     >
       <PageContainer className="flex flex-1 flex-col justify-center py-8 md:py-10">
-        <div className="grid w-full items-center gap-10 lg:grid-cols-[minmax(0,1fr)_clamp(220px,20vw,320px)] lg:gap-12">
+        <div className="grid w-full items-center gap-10 lg:grid-cols-[minmax(0,1fr)_clamp(280px,32vw,440px)] lg:gap-12">
         <div className="min-w-0">
           <h1 className="text-header text-ink lg:whitespace-nowrap">
             Hi, I&apos;m{" "}
@@ -86,8 +86,8 @@ export function Hero() {
           </ul>
         </div>
 
-        <div className="mx-auto w-full max-w-xs sm:max-w-sm lg:max-w-none lg:justify-self-end">
-          <div className="relative aspect-square w-full min-w-[220px] overflow-hidden rounded-full border-4 border-secondary bg-secondary/30 shadow-lg ring-4 ring-background">
+        <div className="mx-auto w-full max-w-[280px] sm:max-w-[360px] lg:max-w-none lg:justify-self-end">
+          <div className="relative aspect-square w-full min-w-[260px] overflow-hidden rounded-full border-4 border-secondary bg-secondary/30 shadow-lg ring-4 ring-background lg:min-w-0">
             <img
               src={SITE.profileImage}
               alt="Portrait of Vaishnavi Raghu"
