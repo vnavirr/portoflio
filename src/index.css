@@ -19,10 +19,16 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 body {
   margin: 0;
+  overflow-x: hidden;
   font-family: var(--font-sans);
   font-size: 1.25rem;
   background-color: var(--color-background);
