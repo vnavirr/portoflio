@@ -93,12 +93,12 @@ export function Modal({ open, title, onClose, children }: ModalProps) {
         aria-modal="true"
         aria-labelledby={titleId}
         tabIndex={-1}
-        className="relative z-10 flex max-h-[90vh] w-full max-w-2xl flex-col overflow-hidden rounded-t-2xl border border-ink/10 bg-card shadow-xl sm:rounded-2xl"
+        className="relative z-10 flex max-h-[90vh] w-full max-w-2xl flex-col overflow-hidden rounded-t-2xl border border-ink/10 bg-card font-sans shadow-xl sm:rounded-2xl"
       >
         <header className="flex shrink-0 items-start justify-between gap-4 border-b border-ink/8 px-6 py-5">
           <h2
             id={titleId}
-            className="text-subheader pr-8 font-semibold text-ink"
+            className="font-serif text-subheader pr-8 font-semibold text-ink"
           >
             {title}
           </h2>
@@ -117,7 +117,9 @@ export function Modal({ open, title, onClose, children }: ModalProps) {
             </svg>
           </button>
         </header>
-        <div className="overflow-y-auto overflow-x-hidden px-6 py-6">{children}</div>
+        <div className="text-alt overflow-y-auto overflow-x-hidden px-6 py-6">
+          {children}
+        </div>
       </div>
     </div>
   );

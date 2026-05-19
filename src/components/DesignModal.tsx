@@ -20,7 +20,7 @@ export function DesignModal({ project, onClose }: DesignModalProps) {
         <CaseBlock title="Problem" body={project.problem} />
 
         <section>
-          <h3 className="mb-2 font-sans text-sm font-semibold uppercase tracking-wide text-ink">
+          <h3 className="mb-2 font-serif text-sm font-semibold uppercase tracking-wide text-ink">
             Process
           </h3>
           <ol className="list-decimal space-y-2 pl-5 leading-relaxed">
@@ -90,7 +90,7 @@ export function DesignModal({ project, onClose }: DesignModalProps) {
 function CaseBlock({ title, body }: { title: string; body: string }) {
   return (
     <section>
-      <h3 className="mb-2 font-sans text-sm font-semibold uppercase tracking-wide text-ink">
+      <h3 className="mb-2 font-serif text-sm font-semibold uppercase tracking-wide text-ink">
         {title}
       </h3>
       <p className="leading-relaxed">{body}</p>

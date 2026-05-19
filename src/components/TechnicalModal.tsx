@@ -13,20 +13,20 @@ export function TechnicalModal({ project, onClose }: TechnicalModalProps) {
     <Modal open={!!project} title={project.title} onClose={onClose}>
       <div className="space-y-6 text-ink-muted">
         {project.timeline && (
-          <p className="text-sm font-medium uppercase tracking-wider text-primary">
+          <p className="font-sans text-sm font-medium uppercase tracking-wider text-primary">
             {project.timeline}
           </p>
         )}
 
         <section>
-          <h3 className="mb-2 font-sans text-sm font-semibold uppercase tracking-wide text-ink">
+          <h3 className="mb-2 font-serif text-sm font-semibold uppercase tracking-wide text-ink">
             Problem
           </h3>
           <p className="leading-relaxed">{project.problem}</p>
         </section>
 
         <section>
-          <h3 className="mb-2 font-sans text-sm font-semibold uppercase tracking-wide text-ink">
+          <h3 className="mb-2 font-serif text-sm font-semibold uppercase tracking-wide text-ink">
             What I built
           </h3>
           <ul className="list-disc space-y-2 pl-5 leading-relaxed">
@@ -37,14 +37,14 @@ export function TechnicalModal({ project, onClose }: TechnicalModalProps) {
         </section>
 
         <section>
-          <h3 className="mb-2 font-sans text-sm font-semibold uppercase tracking-wide text-ink">
+          <h3 className="mb-2 font-serif text-sm font-semibold uppercase tracking-wide text-ink">
             Role
           </h3>
           <p>{project.role}</p>
         </section>
 
         <section>
-          <h3 className="mb-2 font-sans text-sm font-semibold uppercase tracking-wide text-ink">
+          <h3 className="mb-2 font-serif text-sm font-semibold uppercase tracking-wide text-ink">
             Tech stack
           </h3>
           <ul className="flex flex-wrap gap-2">
